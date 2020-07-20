@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        gugudan = {};
+        gugudan.result = []; // 결과를 정렬에 넣어줌
+        gugudan.current = 0; // 초기화 
+        gugudan.calculate = function(n){
+            this.current = n; //gugudan.calculate 에 값을 가져와서 current 값을 n으로 선언
+            for(var i = 0; i<9; i++){
+                this.result[i] = n * (i+1);
+            }
+        }
+
+        gugudan.print = function() {
+            document.write("<h2>" + this.current + "단 </h2>");
+            for(var i = 0; i<9;i++){
+                document.write(this.current + "*" + (i+1) + "=" + this.result[i]+"<br>");
+            }
+        }
+        function main(){
+            for(var i = 0; i <= 7; i++){
+                gugudan.calculate(i);
+                gugudan.print()
+            }
+        } 
+        main()
+    </script>
+</body>
+</html>
