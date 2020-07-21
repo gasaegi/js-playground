@@ -1,0 +1,19 @@
+.box-container{
+    display: flex;
+}
+
+.box{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    background:rgba(255,255, 0, 0.7);
+}
+
+.box:hover{
+    /* transform: scale(3) rotate(15deg); 원래 크기의 몇배로 만들어 주는 역할 */
+    /* transform: skew(15deg); 수평 방향으로 비틀기 */
+    /* transform: translate(30px , 10px); 오른쪽으로 30 왼쪽으로 10  */
+    /* transform: scale(1.5); */
+    transform: rotate(30deg);
+    transform-origin: 100% 100%; /*기준 점을 바꾸어주는 함수   첫번쨰가 가로 두번쨰가 세로*/
+}
